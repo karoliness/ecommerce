@@ -3,14 +3,14 @@ package com.projeto.ecommerce.dominio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcessaoDeDominio {
+public class ExcecaoDeDominio {
     public List<String> mensagensDeErros;
     
-    public ExcessaoDeDominio(){
+    public ExcecaoDeDominio(){
         this.mensagensDeErros = new ArrayList<String>();
     }
 
-    public ExcessaoDeDominio quando(Boolean condicao, String mensagemDeErro){
+    public ExcecaoDeDominio quando(Boolean condicao, String mensagemDeErro){
         if(condicao){
             this.mensagensDeErros.add(mensagemDeErro);
         }
