@@ -10,7 +10,6 @@ public class Autor {
         this.nome = nome;
     }
 
-
     public String getNome() {
         return this.nome;
     }

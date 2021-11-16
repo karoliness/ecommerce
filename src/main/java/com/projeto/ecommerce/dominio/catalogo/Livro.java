@@ -14,9 +14,9 @@ public class Livro extends Produto {
             String edicao) throws Exception {
         super(id, isbn, nome, autores);
         new ExcecaoDeDominio()
-        .quando(null == resumo || resumo.isBlank(), "O resumo do livro é obrigatório")
-        .quando(quantidadePaginas <=0 , "A quantidade de páginas é obrigatório")
-        .quando(null == edicao || edicao.isBlank(), "A edição é obrigatória")
+        .quando(null == resumo || resumo.isBlank(), "O resumo do livro é um campo obrigatório")
+        .quando(quantidadePaginas <=0 , "A quantidade de páginas é um campo obrigatório")
+        .quando(null == edicao || edicao.isBlank(), "A edição é um campo obrigatório")
         .lancar();
         this.resumo = resumo;
         this.quantidadePaginas = quantidadePaginas;
