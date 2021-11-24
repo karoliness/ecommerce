@@ -16,7 +16,7 @@ public class Endereco {
         .quando(null == cidade || cidade.isBlank(), "A cidade é obrigatório")
         .quando(null == estado || estado.isBlank(), "O estado é obrigatório")
         .quando(null == cep || cep.isBlank(), "O cep é obrigatório")
-        .quando(null!= null && 8 != cep.replaceAll("-", "").length(), "O cep é inválido" )
+        .quando(null!= cep && 8 != cep.replaceAll("-", "").length(), "O cep é inválido" )
         .lancar();
         this.logradouro = logradouro;
         this.complemento = complemento;
