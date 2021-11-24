@@ -6,7 +6,9 @@ public class Autor {
     private String nome;
      
     public Autor(String nome) throws Exception {
-        new ExcecaoDeDominio().quando(null == nome ||nome.isBlank(), "O nome do autor é obrigatório").lancar();
+        new ExcecaoDeDominio()
+        .quando(null == nome ||nome.isBlank(), "O nome do autor é obrigatório")
+        .lancar();
         this.nome = nome;
     }
 

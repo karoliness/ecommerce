@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.github.javafaker.Faker;
 
@@ -15,7 +16,7 @@ import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class LivroTest {
-    private Faker faker = new Faker();
+    private Faker faker = new Faker(new Locale("pt-BR"));
 
     private Integer id = faker.number().numberBetween(1, 500);
     private String isbn = faker.idNumber().ssnValid();
